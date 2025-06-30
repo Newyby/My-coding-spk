@@ -1,0 +1,43 @@
+#Section1{
+  background-color: grey;
+  padding: 16px;
+  height: 50vh;
+  text-shadow: 2px cornsilk;
+  margin: 16px;
+}
+body{
+  background-color: blueviolet;
+  color: green;
+  margin: 0px;
+  font-family: Arial;
+}
+#Section2{
+  background-color: greenyellow;
+  padding: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#Subsection1{
+  font-size: 32px;
+  color: blue;
+  font-weight: 900px;
+  
+}
+@media (min-width: 900px) {
+  #section1{
+    background-color: red;
+  }
+}
+  @media (max-width: 500px) {
+  #section1{
+    background-color: green;
+  }
+}
+@media (orientation: landscape) {
+  #Section2{
+  background-color: greenyellow;
+  padding: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+}

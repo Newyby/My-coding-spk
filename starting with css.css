@@ -1,0 +1,28 @@
+h1{
+color: bisque;
+}
+h4{
+background-color: burlywood;
+}
+/** This is how to comment on css **/
+
+.stylingtext{
+color: blue;
+}
+em{
+color: yellowgreen;
+background-color: red;
+}
+em{
+background-color: inherit;
+color: inherit;
+}
+*{
+color: brown;
+}
+#Tulp{
+color: #878;
+}
+#Top{
+  background color: #000;
+}
