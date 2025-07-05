@@ -1,0 +1,67 @@
+*{
+  box-sizing: border-box;
+}
+  
+body{
+  background-color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blueviolet;
+  padding: px;
+  text-align: center;
+}
+
+h1{
+  padding: 20px;
+  text-align: center;
+  color: Green;
+}
+form{
+  background: yellow;
+  padding:  20px;
+  margin: auto;
+  border-radius: 10px;
+}
+label, input, select{
+  width: 100%;
+  padding: 0;
+  margin-bottom: 8px;
+  display: block;
+}
+fieldset{
+  color: yellowgreen;
+  border-radius: 5px;
+  margin-bottom: 0px;
+  border: 10px solid seagreen;
+}
+legend{
+  color: darkred;
+  font-size: 20px;
+}
+input[type="submit"]{
+  background-color: green;
+  width: 120;
+  padding:  10px;
+  color: #000;
+  height: 35px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Make all inputs full width by default */
+input[type="text"],
+input[type="email"],
+input[type="datetime-local"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Make the submit button half the width */
+input[type="submit"] {
+  width: 50%;              /* Half width */
+border: none;
+margin: 20px auto 0;
