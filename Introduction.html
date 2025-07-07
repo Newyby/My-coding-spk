@@ -8,24 +8,65 @@
  <style>
    .Thumbnail{
   width: 300px;
-  Display: block;
+  Display: inline-block;
    }
    .input{
   font-size: 20px;
    }
-   
+    
+   }
+   .div-element{
+     display: inline-block;
+     width:300px;
+   }
    .video{
+  display: inline-block;
+  width="300px"
+  margin: 0;
+  margin-top: 35px;
+   }
+   
+   input{
+    display: block;
+    width="300px"
+   }
+   .video-on{
+  display: inline-block;
+  width: 200px;
+   }
+   .video-author{
+  display: inline-block;
   width: 300px;
    }
-   
-   .video-author,
-   .video-start{
-     display: block;
-   }
+  .video-start{
+  display: inline-block;
+  width: 300px;
+  }
  </style>
 </head>
 
 <body>
+
+ <div class="div-element">
+<input class="input" type="textbox" placeholder="search">
+
+<img class="Thumbnail "src="itel-P65.jpeg">
+<p class="video">
+&nbsp;Talking Tech and AI with Google CEO Sundar Pichai!
+</p>
+<p class="video-author">
+  Marques Brownlee &nbsp;
+</p>
+<p class="video-start">
+3.4M views · 6 months ago &nbsp;
+</p>
+<p class="video-on">
+<br>This is a div &nbsp;
+</p>
+
+</div>
+
+<!-- <div class="div-element">
 <input class="input" type="textbox" placeholder="search">
 
 <img class="Thumbnail "src="itel-P65.jpeg">
@@ -38,6 +79,9 @@ Talking Tech and AI with Google CEO Sundar Pichai!
 <p class="video-start">
 3.4M views · 6 months ago
 </p>
+This is a div
+
+</div> -->
   
 </body>
 
