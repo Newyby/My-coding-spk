@@ -1,0 +1,147 @@
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+  }
+  
+  .Menus {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 350px;
+    
+    
+  }
+  
+  .menu-1 {
+    padding: 20px;
+  }
+  
+  .menu-2 {
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    height: 20px;
+    width: 40px;
+    border-radius: 35px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Container {
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    width: 350px;
+    padding: 30px;
+    margin: 0px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  /* this is sectiom 2 */
+  
+  .image{
+  border:1px solid lightgreen;
+  background-color:lightgreen;
+  width:200px;
+  height: 200px;
+  display:flex;
+  justify-content:center;
+  border-radius:900px;
+  }
+  
+  .image2{
+  border:0px solid;
+  border-radius: 100px;
+  background-color:lightgreen ;
+  mix-blend-mode: multiply;
+  background-color: transparent;
+  }
+  
+  /** Section 2 **/
+  .container{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  margin: 30px;
+  }
+  
+  .text1{
+  height:200px;
+  font-size: 26px;
+  margin-left: 3px;
+  display:flex;
+  flex-direction:column;
+  line-height: 12px;
+  margin-left:30px;
+  justify-content:start;
+  flex: 2;
+
+  }
+  
+  .text2{
+  display:flex;
+  justify-content:center;
+  height: 28px;
+  color: white;
+  font-size:25px;
+  
+  
+  
+  }
+  
+  .text3{
+  display:flex;
+  justify-content:end ;
+  width:100px;
+  background-color: dodgerblue;
+  padding-right: 25px;
+  align-items: center;
+  }
+  
+  .image{
+  flex: 1;
+  border-radius: 200px;
+  width: 200px;
+  height:200px;
+  }
+  
+  /** Section 3 **/
+  .Coontainer{
+  display:flex;
+  flex-direction:row;
+  background-color: mediumpurple;
+  height:80px;
+  justify-content:space-between ;
+  align-items:center;
+  padding-left:10px;
+  padding-right:10px;
+  
+  }
+  
+  .search{
+  width:600px;
+  border-radius:60px;
+  border:0px;
+  font-size: 20px;
+  height: 40px;
+  display: flex;
+
+  }
+  
+  .Home,
+  .Download{
+  color: white;
+  font-size:20px;
+  display:flex;
+  }
+  
+  .Download{
+  border: 2px solid white;
+  padding:15px;
+  display:flex;
+  }
