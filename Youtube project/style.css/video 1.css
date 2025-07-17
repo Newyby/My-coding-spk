@@ -4,7 +4,7 @@
   }
 
   
-  .Picture{
+  .picture{
   width: 300px;
   display: inline-block;
   margin: 0px;
@@ -49,4 +49,9 @@
   
 .header{
 
+}
+
+.profile-text-cont{
+display: flex;
+flex-direction: row;
 }

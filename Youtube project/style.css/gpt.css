@@ -1,0 +1,95 @@
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: blueviolet;
+  z-index: 1000;
+  padding: 0 16px;
+}
+
+body {
+  margin: 0;
+  padding-top: 80px; /* Push page content down so header doesn’t overlap */
+}
+
+.youtube{
+width:150px;
+height:45px;
+
+}
+
+.menu{
+height: 24px;
+width: 24px;
+}
+
+.mice{
+height:20px;
+width: 40px;
+border-radius:20px;
+}
+
+.mic-button{
+height: 50px;
+width: 60px;
+border-radius: 30px;
+border:none;
+}
+
+.searchh{
+height: 40px;
+width: 20px;
+background-color: whitesmoke;
+}
+
+.search-bar{
+height: 45px;
+width: 50px;
+display: flex;
+border: 1px solid grey;
+flex: 1;
+border-radius: 2px;
+box-shadow: inset 1px 2px 3px rgba 0 0 0 0.5;
+background-color: whitesmoke;
+/** setting the width to zero will make it shrink and maintain the width of 50px **/
+}
+
+.search-bar::placeholder{
+font-size: 24px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-button{
+margin-left: -1px;
+width: 66px;
+margin-right: 8px;
+}
+
+.batery{
+height: 24px;
+width:24px;
+}
+
+.notification{
+height: 24px;
+width:24px;
+}
+
+.profile-picture{
+height: 40px;
+width:40px;
+border-radius: 20px;
+}
+
+.image-ext{
+border: 1px solid magenta;
+}
+
+/**.headers{
+position: fixed;
+} **/
