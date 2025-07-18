@@ -59,4 +59,21 @@ flex-direction: row;
 body{
 height:3000px;
 padding-top: 80px;
+margin-left: 80px;
+}
+
+.video-time{
+background-color: black ;
+color: white;
+position: absolute;
+bottom: 8px;
+right: 5px;
+padding: 10px;
+font-weight: 500;
+margin-right: 10px;
+}
+
+.big-picture-cont{
+display: flex;
+position: relative ;
 }

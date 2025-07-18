@@ -7,14 +7,36 @@
   <title>Position practice</title>
 </head>
 
-<body style=" height: 1000px; margin-top: 80px;">
+<body style=" height: 3000px; margin-top: 80px;
+padding-left: 80px;">
 <div style=" background-color: black; color: white; position: fixed; top: 0px; height: 60px; left: 0px;
 right: 0px;">Header</div>
 <!--top specify how far the header is from our top browsee, the same applies to left, right, bottom. setting both top and bottom or left and right will strech the element--></-->
+
+<div style=" background-color:green;
+color: whiete ;
+position: fixed;
+bottom:0;
+top: 60px;
+left: 0;
+width:72px;
+">
+sidebar
+
+<div style=" background-color: red; position: absolute; top:0; right:0">X</div>
+</div>
+
+<div style="background-color:red;
+position: absolute; top: 10px; left:10px; ">absolute</div>
+<!-- absolute move with the page while fixed move with the window, z-index determined which layers comes first or last  z-index:1; 
+important of absolute - when an absolue is placed in a sidebar it will be relatively to that container.it will be relative to sidebar and not to wondow -->
+
 <div style="
 background-color: lightblue; height: 200px; width: 200px; position:static;">div1</div>
 <div style="
-background-color: lightpink; height: 200px; width: 200px">div2</div>
+background-color: lightpink; height: 200px; width: 200px;position: relative;">
+<div style=" position: absolute;top: 59px; right: 20px; background-color:black; color: white;">5:01 </div>
+div2</div>
   
 </body>
 
