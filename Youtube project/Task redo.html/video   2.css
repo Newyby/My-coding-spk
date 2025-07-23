@@ -82,26 +82,11 @@ margin-bottom: 8px;
 
 .whole-cont{
 margin-right: 10px;
-/** other css properties the text decorations is in form of text color font and so on**/
-text-decoration: underline;
 }
 
-@media (max-width:200px){
-.video-grid{
+@media (max-width:50px){
+.profile-text-cont{
 grid-template-columns: 1fr 1fr;
-}
-}
-
-
-@media (min-width:1000px) {
-  .video-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media (max-width:200px) and (min-width:1000px) {
-.video-grid{
-grid-template-columns: 1fr 1fr 1fr;
 }
 }
   

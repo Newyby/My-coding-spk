@@ -1,0 +1,194 @@
+body{
+background-color: rgb(24, 26, 33);
+width: 1400px;
+}
+
+.general-cont{
+
+}
+/**
+.whole-cont{
+display: flex ;
+align-items: center;
+} **/
+
+.header-cont{
+display: flex;
+flex-direction: row;
+font-size: 30px;
+font-weight: 500;
+color: white;
+justify-content: space-between ;
+align-content: center;
+max-width: 800x;
+}
+
+.writing{
+display: flex;
+flex: 1;
+align-items: center;
+margin-left: 30px;
+}
+
+.caa{
+display: flex;
+justify-content: space-between ;
+flex: 0.6;
+margin-right: 80px;
+}
+
+.afri-cont{
+margin: 0;
+margin-top: 4px;
+display:flex; 
+align-items: center;
+position: relative;
+margin-left: 200px;
+}
+
+
+.afri-pic{
+margin-left: 100px;
+width: 500px;
+position: contain;
+}
+
+.wri1{
+font-size:60px;
+color: indianred;
+font-style: italic;
+opacity: 0.5;
+}
+
+.wri2{
+font-size: 25px;
+color: whitesmoke;
+}
+
+.wri1,
+.wri2{
+margin: 0;
+text-align: center;
+margin-left: 100px;
+
+}
+
+.wr12{
+position: absolute;
+bottom: 1px;
+white-space: nowrap;
+}
+
+.line{
+border-bottom: 2px solid rgb(138, 146, 166);
+margin-top: 100px;
+}
+
+header,
+.secondheader
+{
+margin-left: 80px;
+margin-right: 80px;
+}
+
+.icons img{
+width: 30px;
+}
+
+.text div{
+color: rgb(138, 146, 166);
+margin: 0;
+font-size: 30px;
+}
+
+
+
+.secondheader{
+display: flex;
+flex-direction: row;
+justify-content: space-between ;
+
+
+}
+
+.text{
+display:flex;
+flex-direction:row;
+flex:1;
+justify-content: space-evenly;
+}
+
+.icons{
+display: flex ;
+}
+
+.flexpic{
+width: 250px;
+}
+
+.flex-cont{
+width: 230px;
+background-color: whitesmoke;
+padding: 70px;
+border-radius: 15px;
+margin: 5px;
+
+}
+
+.flextext{
+text-align: left;
+}
+
+.a,
+.as,
+.ass{
+display: flex;
+flex-direction: row;
+flex: 0 0 0;
+justify-content: space-between; 
+margin-top: 90px;
+padding: 65px;
+margin-right: 60px;
+width: 1210px;
+padding-bottom: 30px;
+}
+
+
+.as,
+.ass{
+margin: 0px;
+padding-top: 2px;
+}
+
+.foo{
+color: rgb(138, 146, 166);
+display: flex;
+flex-direction: row;
+font-size: 30px;
+font-weight: 700;
+font-style:Arial;
+justify-content: center;
+align-items: center;
+margin:0;
+margin-bottom: 40px;
+}
+
+.foo div{
+display: flex ;
+margin:0 ;
+padding: 30px;
+padding-bottom: 5px;
+}
+
+.ass{
+margin-bottom: 65px;
+}
+
+.foo div:active{
+border-top: 3px solid #f87171;
+color: #f87171;
+border-top: 4px solid #f87171;
+
+}
+
+
