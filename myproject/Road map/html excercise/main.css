@@ -1,0 +1,6 @@
+table, tr, th, caption, td {
+border: 1px solid green;
+font-family: Arial;
+padding: 0.5rem;
+border-collapse: collapse;
+}

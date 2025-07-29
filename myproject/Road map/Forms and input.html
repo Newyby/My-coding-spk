@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Form and input</title>
+</head>
+
+<body>
+  <nav>
+  <ul>
+    <li>
+      <a href="#html">Learn more about html</a>
+    </li>
+    <li>
+      <a href="#vacation">This is all about learning how to travel</a>
+      
+    </li>
+        <li>
+      <a href="#contact">Contact me</a>
+      
+    </li>
+  <ul>
+</nav>
+  
+  <hr>
+<article id="contact">
+<h2>Contact me</h2>
+<p>I really like to hear from you </p>
+
+<form action="https://httpbin.org/get" method="get">
+<fieldset>
+<legend>Personal</legend>
+<p>
+<label for="firstName">First name</label>
+<input type="text" name="firstName" id="firstName" placeholder="jane" autocomplete="on" required autofocus>
+</p>
+<p>
+<label for="lastName">last name</label>
+<input type="text" name="lastName" id="lastName" placeholder="Dow" autocomplete="on" required>
+</p>
+
+<label for="password">Password</label>
+<input type="password" name="password" id="password" placeholder="your secret" required>
+<p>
+<label for="phone">Phone no</label>
+<input type="tel" name="phone" id="password" placeholder="555555555" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+</p>
+
+
+<p>
+<label for="decade">Favourite Decade:</label>
+<input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980">
+</p>
+<p>
+<label for="coffee">Favourite coffee</label>
+<select name="coffee" id="coffee" multiple size="5">
+<optgroup label="coffees">
+<option value="regular coffee">Regular Coffee</option>
+<option value="ice coffee">Ice Coffee</option>
+</optgroup>
+<optgroup label="Expresso Drinks">
+<option value="latee" selected>latee</option>
+<option value="capeitino">capeitino</option>
+<option value="cortado">cortado</option>
+<option value="americana">Americana</option>
+</optgroup>
+
+<option value="others">Others</option>
+
+<!-- you can chose which to display first by this <option value="latee" selected>latee</option> -->
+  
+</select>
+</p>
+</fieldset>
+<br>
+<fieldset>
+  <legend>what is your favorite food</legend>
+<p>
+<input type="radio" name="food" id="tacos" value="tacos">
+<label for="tacos">Tacos</label>
+</p>
+
+<p>
+  <input type="radio" name="food" id="pizza" value="">
+  <label for="pizza">Pizza</label>
+</p>
+
+<p>
+  <input type="radio" name="food" id="others" value="others">
+  <label for="others">Others</label>
+</p>
+</fieldset>
+<fieldset>
+<legend>Do you have pet</legend>
+<p>
+  
+<input type="checkbox" name="pets" id="dog" value="dog">
+<label for="dog">Dog</label>
+</p>
+
+
+<p>
+  
+  <input type="checkbox" name="pets" id="cat" value="cat">
+  <label for="cat">Cat</label>
+</p>
+
+
+
+
+<p>
+  
+  <input type="checkbox" name="pets" id="fish" value="fish">
+  <label for="fish">Fish</label>
+</p>
+
+<p>
+  
+  <input type="checkbox" name="pets" id="otherpet" value="otherpet">
+  <label for="otherpet">Other</label>
+</p>
+</fieldset>
+<br>
+<fieldset>
+<legend>Send me a note</legend>
+<label for="message"> your message</label>
+<br>
+<textarea name="messag" id="message" rows="8" cols="40" placeholder="type your message here"></textarea>
+<p>
+
+</p>
+</fieldset>
+
+<br>
+<button type="submit">Submit</button>
+<<button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+<button type="reset">Reset</button>
+</form>
+</article>
+
+
+<hr>
+<hr>
+
+<form>
+<fieldset>
+<legend>Personal info</legend>
+<p>
+<label for="coffee">Favourite coffee</label>
+<input type="text" name="coffee" id="coffee" list="cofee-list">
+<datalist id="cofee-list">
+<option value="regular coffee">
+<option value="ice coffee">
+<option value="latee">
+<option value="capeitino">
+<option value="cortado">
+<option value="americana">
+<option value="others">
+</datalist>
+</p>
+</fieldset>
+</form>
+<!-- you can chose which to display first by this <option value="latee" selected>latee</option> -->
+  
+</body>
+
+</html>
