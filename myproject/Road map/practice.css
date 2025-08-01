@@ -1,0 +1,233 @@
+/** 
+text-transform: upercase, lowercase
+line-height: 1.5
+colours.co
+width:40ch;
+100vh , border-box
+100em
+100rem, font:inherit;
+resetting....
+margin - 0, padding-0, box-sizing - border-box
+border- solid, outset, dashed, double , ridge
+text-decoration: underline, overline line- through
+text-align: right, left, justify
+text-indent: 2em
+letter spacing, word spacing
+font-family- monospace
+links.......
+a:visited a:focus{
+color:
+....lists
+ol{
+list-style-type: lower-alpa, square, circle, bullet
+
+}
+<ol start="3" reversed> in html file
+<li value="26"> means it will start from 26th line"
+}
+list-style-position: inside, outside
+list-style: square url() inside;
+ul li:nth-child(2){
+color: red....this means only change the second list no to red.in addition to two.we can also pass even or odd
+::marker{
+black
+this is for design of the bulletin
+font-family, font- size
+}
+margin: 0 auto 1rem ...use with text- align: center to center element to center
+(
+float:right;
+clear:both....that is left and right to be on a single line in a container it is.
+to fix a problem of floating not align with the line of text..
+overflow: auto;
+display:flow-root(modern way)
+)
+}
+**/
+ /**     *{
+margin: 0;
+padding: 0;
+box-sizing: border;
+}
+
+**/
+body{
+max-height: 100vh;
+}
+html{
+scroll-behavior: smooth;
+}
+
+header{
+width: 50%;
+}
+p{
+color: purple;
+}
+p{
+color: red;
+font-size: 50%;
+border: 1px solid black;
+}
+
+.j{
+color: green;
+border: none;
+font-size: 1rem;
+
+}
+
+.s{
+font-size: 3rem;
+display: block;
+border: 1px solid black;
+padding: 1em;
+border: 10px double powderblue;
+outline: 5px solid purple;
+outline-offset: 5px; /** it can be -10px to put the outline inside **=  display:none..to remove the display of a code on a browser**/
+}
+
+li{
+display: inline-block;
+background-color: green;
+padding: 20px;
+margin-inline:0.5rem;
+}
+
+.block{
+width:20vh;
+height:20vh;
+color:white ;
+background-color: black;
+overflow: auto;
+}
+
+.left{
+float: left;
+}
+
+.p{
+font-size: 2rem; 
+}
+
+.clear{
+clear:both ;
+}
+
+.r{
+background-color:bisque;
+overflow: auto;
+}
+
+.column{
+column-count:4;
+font-size: 2rem;
+margin:0;
+padding:0;
+column-width: 250px;
+/** shorthand is column:4 250px; **/
+column-rule: 3px solid green;
+column-gap: 3rem;
+border:none;
+}
+
+.column h2{
+background-color: black;
+margin: 0;
+color: #fff;
+break-inside: avoid;/** it wont split the header 
+li a:hover li a:focus**/
+}
+
+.quote{
+font-size:3em;
+text-align: center;
+color: #333;
+column-span: all;
+}
+
+.column p{
+border: none;
+}
+
+
+
+.nowrap{
+white-space: nowrap;
+}
+/** position: fixed, relative, absolute and sticky( it stays @ the value e.g top,bottom and goes with the container as it catches with it) 
+.y{
+  position: absolute
+  top:-100000px....to take things off the page) 
+} 
+**/
+body{
+min-height:100vh;
+padding: 20px;
+}
+
+.container{
+border: 1px solid black;
+max-width: 800px;
+min-height: 400px;
+margin-inline: auto;
+display: flex;
+justify-content: space-evenly;/** flex-start 
+align-content **/
+margin: 0;
+gap:1rem;
+/**flex-direction: row-reverse; /** column reverse 
+flex-wrap: wrap; **/
+ flex-flow: row wrap;
+}
+
+.container div{
+font-size: 2rem;
+color: whitesmoke;
+background-color: black ;
+min-height: 100px;
+min-width:100px ;
+font-size: 2rem;
+padding: 0.5rem;
+margin: 0;
+}
+/**
+flex-grow:1
+flex-basis:100px ( it work like width)
+having a two container inside a container...to target the 2nd container...
+say
+div:nth-child(2){
+flex-grow:2
+shorthand: grow shrink basics
+flex: 1 1 250
+order:4.....to move containers across each other
+grid-auto-flow: row
+} **/
+
+.grid{
+display: grid;
+/**grid-template-columns: 2fr 1fr 2fr; **/
+grid-template-columns: repeat(4, 1fr);
+grid-auto-rows: minmax(150px, auto);
+row-gap: 1em;
+gap: 1em; /** can be column-gap or row-gap  or gap: 1em 2em;**/
+}
+
+.box{
+background-color: black;
+color: whitesmoke;
+font-size:2rem;
+padding: 0.5rem;
+}
+
+.box:first-child{
+background-color: green;
+/**grid-column-start: 1;
+grid-column-end: 4; /** and also with row...grid-start-row **/
+
+grid-column: 1 / 4;
+grid-row: 1 / 3;
+align-content: center; /** shorthand of justify and align is place-content: end center and citing one only assume both**/
+justify-content: center;
+display: grid;
+}

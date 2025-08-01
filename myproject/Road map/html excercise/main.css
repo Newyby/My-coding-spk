@@ -4,3 +4,11 @@ font-family: Arial;
 padding: 0.5rem;
 border-collapse: collapse;
 }
+
+ul{
+list-style-image: url("../favicon.png");
+}
+
+::marker{
+content: "only $5>> ";
+}
