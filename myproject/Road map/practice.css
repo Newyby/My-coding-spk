@@ -202,6 +202,12 @@ shorthand: grow shrink basics
 flex: 1 1 250
 order:4.....to move containers across each other
 grid-auto-flow: row
+align item and align self work the same way..only use 1(when there is only 1 line or content...pick one))
+order: can be positive or negative
+flex- direction
+flex-wrap
+flex-flow:flex-direction flex wrap 
+flex-flow:row wrap 
 } **/
 
 .grid{

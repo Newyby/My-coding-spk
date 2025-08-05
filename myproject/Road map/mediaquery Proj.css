@@ -1,0 +1,156 @@
+  *{
+  margin:0;
+  padding:0;
+  border-sizing:border-box;
+  }
+  html{
+  scroll-behavior:smooth;
+  }
+  
+  
+    body{
+    min-height: 100vh;
+    background-color: #475569;
+    background-image:radial-gradient(whitesmoke, #475569); /** make the colour starts from the  middle **/
+    display:flex;
+    flex-direction:column;
+    }
+    img{
+    display:block; /** remove little space around images **/
+    max-width: 100%;/** it wont overflow its container **/
+    height:auto;
+    }
+     
+     
+     header,footer{
+      position:sticky;
+      background-color:#1E2938;
+      color: whitesmoke ;
+      text-align:center;
+     }
+     
+     header {
+      top:0;
+     }
+     nav{
+     background-color:#fff;
+     padding:0.5rem;
+     border-bottom:2px solid #000;
+     font-weight:bolder;
+     display:flex ;
+     justify-content: space-evenly;
+     }
+     
+     nav a, nav a:visited{
+      color: #000;
+     }
+     
+     nav a:hover, nav a:focus{
+      color: hsla(0, 0%, 20%, 0.6%);
+     }
+     main{
+     flex-grow: 1;
+     display:flex;
+     flex-direction: column;
+     align-items:center;
+     gap:1.5rem;
+     padding:1rem;
+
+     }
+     
+     .nowrap{
+      white-space:nowrap;
+     }
+     
+     .card{
+    scroll-margin-top: 8rem;
+     width: min(100% 350px);
+     color: #000;
+     border:2px solid black;
+     border-radius: 15px;
+     padding: 1rem;
+     display: flex;
+     align-items: center;
+     }
+     
+     .card figure{
+      display:flex;
+      flex-flow: column nowrap;
+      align-items:center;
+     }
+     
+     .card img{
+      border:5px double #333;
+      border-radius:50%;
+     }
+     
+     .card figcaption{
+      font-weight: bolder;
+      font-size:2rem;
+      margin:1rem;
+      text-align: center;
+     }
+     footer{
+    bottom:0;
+     }
+     
+     /** utility class **/
+     .
+     /** small **/
+@media screen and (min-width: 570px) {
+  main{
+  justify-content:center;
+  flex-flow: row wrap;
+  padding:1rem;
+  }
+  
+  .card{
+  width: min(100% 400px);
+  }
+.card:last-child{
+order:-1;
+}
+}
+
+
+     /** medium **/
+@media screen and (min-width: 768px) {
+  body {
+    background-color: gold;
+    background-image: radial-gradient(whitesmoke, gold);
+  }
+
+}  
+
+
+     /** large **/
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke, firebrick);
+  }
+  
+}  
+
+
+     /** mobile device landscape**/
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4p) {
+  body {
+    background-color: dodgerblue;
+    background-image: radial-gradient(whitesmoke, dodgerblue);
+  }
+  h1,h2{
+  font-size:1.5rem;
+  }
+}  
+
+
+    /** make the colour starts from the  middle **/
+     
+     
+
+    
+  /**@media screen  and (min-width:480px) {
+  }
+  /**   @media screen  and (orientation:landscape) { //css rule/
+  @media screen  and (min-aspect-ratio:16/9 or 7/4) { **/

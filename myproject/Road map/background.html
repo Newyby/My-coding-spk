@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+  body{
+  background-color: aliceblue;
+  background-image:url("css.pg"),linear-gradient(to left, steelblue, purple, white);
+  min-height:100vh;
+  /** to left, to right, to bottom, to top 
+  to work with image and gradient 
+  background-repeat: repeat-y, no-repeat; 
+background-position:right, center;
+background-size: 20px, auto;
+shorthand...
+background-image:repeat-y right center url() repeat linear-gradient 
+**/
+
+.clip{
+font-weight:800;
+font-size: 18rem;
+text-align: center;
+background-image: url("css.jpg");
+background-size:100%;
+text-transform:uppercase;
+-webkit-background-clip: text;/** it takes the background image off **/
+color: hsla(0, 0%, 0%, 0.196);/** enable transparency to view the image under the text. keep changing the last value to suit your taste
+color:transparent; it works too
+**/
+background-clip: text;/** this will make it suitable for all browser **/
+  }
+  
+  
+
+  }
+  </style>
+</head>
+
+<body>
+  <section>
+  <p class="clip">jane</p>
+  </section>
+</body>
+
+</html>

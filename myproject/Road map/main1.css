@@ -12,6 +12,7 @@ grid-template-areas:
 "hd hd hd hd hd hd hd hd hd "
 "mn mn mn mn mn mn mn sb sb"
 "ft ft ft ft ft ft ft ft ft";
+gap:1rem;
 }
 
 .el{
@@ -58,7 +59,8 @@ grid-column-end: 4; /** and also with row...grid-start-row **/
 
 grid-column: 1 / 4;
 grid-row: 1 / 3;
-align-content: center; /** shorthand of justify and align is place-content: end center and citing one only assume both**/
+align-content: center; /** shorthand of justify and align is place-content: end center and citing one only assume both*
+grid column:span 2 also work but it takes only positive value*/
 justify-content: center;
 display: grid;
 }
