@@ -1,4 +1,27 @@
-table, tr, th, caption, td {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*table, tr, th, caption, td {
 border: 1px solid green;
 font-family: Arial;
 padding: 0.5rem;
@@ -11,4 +34,4 @@ list-style-image: url("../favicon.png");
 
 ::marker{
 content: "only $5>> ";
-}
+} */

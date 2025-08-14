@@ -21,7 +21,7 @@
     height:auto;
     }
      
-     
+     /**sh is :is(header,footer){css style// put where instead if is to override it**/
      header,footer{
       position:sticky;
       background-color:#1E2938;
@@ -41,13 +41,14 @@
      justify-content: space-evenly;
      }
      
-     nav a, nav a:visited{
-      color: #000;
+     nav a:link,/** sh is nav a:any-link{//css style//**/
+     nav a:visited{
+      color: #000; /** a:link, a:active **/
      }
      
      nav a:hover, nav a:focus{
       color: hsla(0, 0%, 20%, 0.6%);
-     }
+     } /** shorthand is nav:is(a:hover, a:focus**/
      main{
      flex-grow: 1;
      display:flex;
@@ -71,6 +72,11 @@
      padding: 1rem;
      display: flex;
      align-items: center;
+     flex-direction : column;
+     }
+     
+     .card:target{
+    border: 2px solid rebeccapurple;
      }
      
      .card figure{
@@ -84,11 +90,59 @@
       border-radius:50%;
      }
      
+     .card img[alt]{
+      border: 10px solid red;
+     }
+     
+     .card:nth-child(2){
+    background-color: papayawhip
+     }
+     
+     .card figcaption::after {
+      content: "hello";
+     }
+     
+     .card figcaption::before{
+      content: "🎀";
+      display: block;
+     }
+     
+     .card p::before{
+      content: open-quote;
+      font-size: 3em;
+       position:absolute;
+       top:-0.25em;
+       left:-0.5em;
+     }
+     .card p{
+      position:relative;
+     }
+     .card p::after {
+       content: close-quote;
+      font-size: 3em;
+       position:absolute;
+       top:-0.25em;
+       right:-0.5em;
+
+     }
+     /** to check which one not having alt
+        .card img:not([alt]){
+       border: 10px solid red;
+     }**/
      .card figcaption{
       font-weight: bolder;
       font-size:2rem;
       margin:1rem;
       text-align: center;
+     }
+     
+     .card figcaption::first-letter{
+    font-size: 3rem;
+     }
+     /** aplies to the emoji because is the first letter**/
+     
+     .card figcaption::first-line {
+       font-size: 3rem;
      }
      footer{
     bottom:0;
