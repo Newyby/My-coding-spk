@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Listener Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h2 {
+      color: #333;
+      margin-top: 40px;
+    }
+    button, input, select {
+      padding: 8px 12px;
+      margin-top: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .box {
+      width: 150px;
+      height: 100px;
+      background-color: lightblue;
+      margin-top: 10px;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    #scrollBox {
+      height: 120px;
+      overflow-y: scroll;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    #scrollBox p {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Event Listener Demonstration</h1>
+
+  <!-- 1. CLICK EVENT -->
+  <h2>1. Click Event</h2>
+  <button id="clickBtn">Click Me</button>
+  <p id="clickResult"></p>
+
+  <!-- 2. DOUBLE CLICK EVENT -->
+  <h2>2. Double Click Event</h2>
+  <button id="dblBtn">Double Click Me</button>
+  <p id="dblResult"></p>
+
+  <!-- 3. KEYDOWN EVENT -->
+  <h2>3. Keydown Event (Press Any Key)</h2>
+  <input type="text" id="keydownInput" placeholder="Type something..." />
+  <p id="keydownResult"></p>
+
+  <!-- 4. KEYUP EVENT -->
+  <h2>4. Keyup Event (Release Any Key)</h2>
+  <input type="text" id="keyupInput" placeholder="Type and release..." />
+  <p id="keyupResult"></p>
+
+  <!-- 5. INPUT EVENT -->
+  <h2>5. Input Event (Live Update)</h2>
+  <input type="text" id="liveInput" placeholder="Start typing..." />
+  <p id="liveResult"></p>
+
+  <!-- 6. MOUSEOVER + MOUSEOUT -->
+  <h2>6. Mouseover & Mouseout</h2>
+  <div id="hoverBox" class="box">Hover Me</div>
+
+  <!-- 7. CHANGE EVENT -->
+  <h2>7. Change Event (Dropdown)</h2>
+  <select id="colorSelect">
+    <option value="">-- Choose a color --</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+  </select>
+  <p id="colorResult"></p>
+
+  <!-- 8. SUBMIT EVENT -->
+  <h2>8. Submit Event</h2>
+  <form id="demoForm">
+    <input type="text" id="nameInput" placeholder="Enter name" />
+    <button type="submit">Submit</button>
+  </form>
+  <p id="formResult"></p>
+
+  <!-- 9. SCROLL EVENT -->
+  <h2>9. Scroll Event</h2>
+  <div id="scrollBox">
+    <p>Scroll me down to trigger the event!</p>
+    <p>Keep scrolling...</p>
+    <p>Almost there...</p>
+    <p>And there you go! 🎉</p>
+  </div>
+  <p id="scrollResult"></p>
+
+  <!-- 10. DBLCLICK BONUS EVENT (TOGGLE COLOR) -->
+  <h2>10. Bonus: Toggle Background on Double Click</h2>
+  <div id="toggleBox" class="box" style="background-color: lightgreen;">
+    Double Click Me
+  </div>
+
+  <script>
+    // 1. CLICK
+    const clickBtn = document.getElementById("clickBtn");
+    const clickResult = document.getElementById("clickResult");
+    clickBtn.addEventListener("click", () => {
+      clickResult.textContent = "Button was clicked! ✅";
+    });
+
+    // 2. DOUBLE CLICK
+    const dblBtn = document.getElementById("dblBtn");
+    const dblResult = document.getElementById("dblResult");
+    dblBtn.addEventListener("dblclick", () => {
+      dblResult.textContent = "You double-clicked! 🔥";
+    });
+
+    // 3. KEYDOWN
+    const keydownInput = document.getElementById("keydownInput");
+    const keydownResult = document.getElementById("keydownResult");
+    keydownInput.addEventListener("keydown", (e) => {
+      keydownResult.textContent = `Key pressed: ${e.key}`;
+    });
+
+    // 4. KEYUP
+    const keyupInput = document.getElementById("keyupInput");
+    const keyupResult = document.getElementById("keyupResult");
+    keyupInput.addEventListener("keyup", (e) => {
+      keyupResult.textContent = `Key released: ${e.key}`;
+    });
+
+    // 5. INPUT EVENT (LIVE TYPING)
+    const liveInput = document.getElementById("liveInput");
+    const liveResult = document.getElementById("liveResult");
+    liveInput.addEventListener("input", () => {
+      liveResult.textContent = `You typed: ${liveInput.value}`;
+    });
+
+    // 6. MOUSEOVER & MOUSEOUT
+    const hoverBox = document.getElementById("hoverBox");
+    hoverBox.addEventListener("mouseover", () => {
+      hoverBox.style.backgroundColor = "orange";
+      hoverBox.textContent = "Mouse Over 🟠";
+    });
+    hoverBox.addEventListener("mouseout", () => {
+      hoverBox.style.backgroundColor = "lightblue";
+      hoverBox.textContent = "Hover Me";
+    });
+
+    // 7. CHANGE EVENT (DROPDOWN)
+    const colorSelect = document.getElementById("colorSelect");
+    const colorResult = document.getElementById("colorResult");
+    colorSelect.addEventListener("change", () => {
+      colorResult.textContent = `You selected: ${colorSelect.value}`;
+    });
+
+    // 8. SUBMIT EVENT
+    const demoForm = document.getElementById("demoForm");
+    const formResult = document.getElementById("formResult");
+    demoForm.addEventListener("submit", (e) => {
+      e.preventDefault(); // Prevent page refresh
+      formResult.textContent = `Hello, ${document.getElementById("nameInput").value}! ✅`;
+    });
+
+    // 9. SCROLL EVENT
+    const scrollBox = document.getElementById("scrollBox");
+    const scrollResult = document.getElementById("scrollResult");
+    scrollBox.addEventListener("scroll", () => {
+      scrollResult.textContent = "You are scrolling! 🟢";
+    });
+
+    // 10. DOUBLE CLICK TOGGLE BACKGROUND
+    const toggleBox = document.getElementById("toggleBox");
+    let toggled = false;
+    toggleBox.addEventListener("dblclick", () => {
+      toggled = !toggled;
+      toggleBox.style.backgroundColor = toggled ? "tomato" : "lightgreen";
+    });
+  </script>
+</body>
+</html>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    .Game{
+    background-color:black;
+    color: white;
+    padding:10px;
+    border: none;
+    cursor: pointer;
+    font:36px;
+    }
+    
+    .is-toggled{
+    background-color:whitesmoke ;
+    color:black;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <button class="js-button">Test</button>
+  <br><br>
+  <button onclick="
+  gameClick();
+  " class="Game">Gaming</button>
+ <script>
+ const buttonElement = document.querySelector('.js-button');
+ buttonElement.classList.add('ws-button');
+ buttonElement.classList.contains('ws-button');
+ 
+ 
+ function gameClick(){
+   const buttonGame = document.querySelector('.Game');
+ 
+ buttonGame.classList.toggle('is-toggled');
+ } 
+/**if (buttonGame.innerHTML === 'Gaming'){
+ buttonGame.classList.add('is-toggled');
+}else{
+buttonGame.classList.remove('is-toggled');
+};
+ } **/
+
+ </script>
+</body>
+
+</html>

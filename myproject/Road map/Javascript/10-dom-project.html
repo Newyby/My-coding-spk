@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dom project</title>
+  <style>
+ .subscribe-button{
+   background-color: black ;
+   color: whitesmoke;
+   padding: 15px;
+   border-radius: 30px;
+   border:none;
+   cursor: pointer;
+   
+ }
+ 
+ .is-subscribed{
+  background-color: rgb(240, 240, 240);
+  color: black;
+   
+ }
+ 
+ .error-message{
+  color: red;
+ }
+    
+  </style>
+  
+</head>
+
+<body>
+  <p>
+   Youtube subscribe button
+  </p>
+  
+  <button onclick="
+    subscribe();
+     " class="js-subscribe-button subscribe-button" s>Subscribe</button>
+     
+     <p>Amazon shipping calculator </p>
+     <input placeholder="cost of order" class="js-cost-input" onkeydown="
+       handleCostKeydown(event);
+     ">
+     <button onclick="
+     calculateTotal();
+     ">calculate</button>
+     <p class="js-total-cost"></p>
+    <p class="js-error-message error-message"></p>
+
+  <script>
+  String(25); //convert to string
+  console.log('25' - 5)
+  
+
+  window.document
+  window.console.log('window');
+  window.alert
+  
+  
+  function handleCostKeydown(event){
+          
+        if (event.key === 'Enter') {
+          calculateTotal();
+        } 
+  }
+  function calculateTotal(){
+const inputElement = document.querySelector('.js-cost-input');
+let cost = Number(inputElement.value);
+
+
+document.querySelector('.js-total-cost').innerHTML = '';
+document.querySelector('.js-error-message').innerHTML = '';
+
+if(cost < 0){
+document.querySelector('.js-error-message').innerHTML = `Error: cost cant be less than $0`;
+return;
+}
+  
+
+if(cost < 40){
+cost = cost + 10;
+
+}
+
+document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+  }
+  
+    function subscribe(){
+      const buttonElement = document.querySelector('.js-subscribe-button');
+  if(buttonElement.innerHTML === 'Subscribe'){
+     buttonElement.innerHTML = 'Subscribed'
+    buttonElement.classList.add('is-subscribed');
+    
+  }
+     else{
+     buttonElement.innerHTML === 'Subscribe' 
+       
+            buttonElement.classList.remove('is-subscribed');
+
+     };  
+
+      
+    }
+  </script>
+  
+  <!-- if there are text around the Subscribe...use innerText instead of innerHTML**/ -->
+
+</body>
+
+</html>

@@ -1,67 +1,10 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rock - paper -scissor</title>
-</head>
-
-<body>
-<!--  <p>Rock Paper Scissors</p>
-  <button onclick="
-  const randomnumber = (Math.random());
-  if (randomnumber >= 0 && randomnumber < 1/3) {
-  console.log('Rock');
-  } else if (randomnumber >= 1/3 && randomnumber < 2/3) {
-  console.log('Paper');
-  } else if (randomnumber >= 2/3 && randomnumber > 1) {
-  console.log('Scissors')
-  }
-  ">Rock</button>
-  
--->  
-  
-  
-  <!DOCTYPE html>
-<html>
-  <head>
-    <title>Rock Paper Scissors</title>
-  </head>
-  <body>
-    <p>Rock Paper Scissors</p>
-    <button onclick="
-      playGame('rock');
-    ">Rock</button>
-
-    <button onclick="
-      playGame('paper');
-    ">Paper</button>
-
-    <button onclick="
-      playGame('scissors');
-    ">Scissors</button>
-    
-    <p class="js-score"></p>
-    
-    <button onclick="
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-
-    ">Reset score</button>
-
-    <script>
     let score = JSON.parse(localStorage.getItem('score')) || {
       wins: 0,
       losses: 0,
       ties: 0
     };
 
- document.querySelector('.js-score')
-    .innerHTML = `wins: ${score.wins},Losses: ${score.losses}, Ties: ${score.ties}`
-      
+   updateScoreElement();
     
 
     
@@ -85,8 +28,26 @@
     
 console.log(JSON.parse(localStorage.getItem('score'))
 )
+//to stop it from playing
+
+let isAutoPlaying = false
+let intervalId;
 
 
+
+ function autoPlay(){
+   if(!isAutoPlaying){
+      intervalId =  setInterval(function() {
+     const playerMove = pickComputerMove();
+     playGame(playerMove);
+   }, 1000); 
+   isAutoPlaying = true
+   }else{
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+   }
+
+ }
 
 
       function playGame(playerMove) {
@@ -134,10 +95,24 @@ console.log(JSON.parse(localStorage.getItem('score'))
 
 localStorage.setItem('score',JSON.stringify(score));
 
+updateScoreElement();
+document.querySelector('.js-result').innerHTML = result;
+
+document.querySelector('.js-moves').innerHTML =`you 
+    <img src="${playerMove}-emoji.png" class="move-icon">
+    <img src="${computerMove}-emoji.png" class="move-icon">
+    computer`
+
+
 /*localStorage.setItem('message', 'hello');*/
         alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
   wins: ${score.wins},Losses: ${score.losses}, Ties: ${score.ties}`);
       }
+      
+  function updateScoreElement(){
+    document.querySelector('.js-score')
+   .innerHTML = `wins: ${score.wins},Losses: ${score.losses}, Ties: ${score.ties}` 
+  }
 
       function pickComputerMove() {
         const randomNumber = Math.random();
@@ -163,11 +138,3 @@ localStorage.setItem('score',JSON.stringify(score));
     } 
     
     */
-  
-    </script>
-  </body>
-</html>
-    
-    
-    
-

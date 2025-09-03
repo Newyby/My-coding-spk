@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    
+    .Game
+    {
+    background-color:black;
+    color: white;
+    padding:10px;
+    border: none;
+    cursor: pointer;
+    font:36px;
+    margin-left: 40px;
+    }
+    
+    .is-toggle{
+    background-color:whitesmoke ;
+    color:black;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <button class="Game" onclick="
+  toggled(this);
+  ">Gaming</button>
+  
+  
+    <button class="Game" onclick="
+   toggled(this);
+
+    ">Music</button>
+  
+  
+  
+    <button class="Game" onclick="
+    toggled(this);
+
+    ">Tech</button>
+  
+
+  <script>
+  
+  
+
+function toggled(buttonElement){
+  {
+    
+       buttonElement.classList.toggle('is-toggle');
+  }
+
+}
+  </script>
+
+
+
+</body>
+
+</html>
