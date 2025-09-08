@@ -49,6 +49,39 @@ let intervalId;
 
  }
 
+document.querySelector('.js-rock-button').addEventListener('click', () => {
+  playGame('rock');
+  
+});
+
+document.querySelector('.js-paper-button').addEventListener('click', () => {
+  playGame('paper');
+  
+});
+
+
+document.querySelector('.js-scissors-button').addEventListener('click', () => {
+  playGame('scissors');
+  
+});
+
+document.querySelector('.js-reset-button').addEventListener('click', () => {
+     score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement(); 
+  
+});
+
+
+document.querySelector('.js-auto-button').addEventListener('click', () => {
+autoPlay();
+});
+
+
+
+
 
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
@@ -105,9 +138,16 @@ document.querySelector('.js-moves').innerHTML =`you
 
 
 /*localStorage.setItem('message', 'hello');*/
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+     /*   alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
   wins: ${score.wins},Losses: ${score.losses}, Ties: ${score.ties}`);
       }
+      */
+      
+   const message = `You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+  wins: ${score.wins},Losses: ${score.losses}, Ties: ${score.ties}`;
+        } 
+      
+      
       
   function updateScoreElement(){
     document.querySelector('.js-score')
@@ -130,6 +170,16 @@ document.querySelector('.js-moves').innerHTML =`you
         return computerMove;
       }
 
+
+document.body.addEventListener('keydown', (event) => {
+  if(event.key === 'r'){
+  playGame('rock');
+  }else if (event.key === 'p'){
+   playGame('paper');
+  }else if(event.key === 's'){
+    playGame('scissors');
+  }
+});
  /*
  
   console.log('after'); wont run any code after return*/
