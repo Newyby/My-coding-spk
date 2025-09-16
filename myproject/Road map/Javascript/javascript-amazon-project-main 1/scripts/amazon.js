@@ -1,3 +1,9 @@
+import {cart} from '../data/cart.js';
+
+//import {cart as myCart} from '//../data/cart.js';
+//module renaming above
+
+
 let productsHtml = '';
 
 products.forEach((product) => {
