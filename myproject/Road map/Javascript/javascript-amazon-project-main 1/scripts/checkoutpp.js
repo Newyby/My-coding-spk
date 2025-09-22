@@ -24,6 +24,8 @@ const today = dayjs();
 const deliveryDate = today.add(7, 'days');
 console.log(deliveryDate.format('dddd, MMMM, D'));
 
+function renderOrderSummary() {
+
 let cartSummaryHtml = '';
 
 cart.forEach((cartItem) => {
@@ -45,7 +47,7 @@ cart.forEach((cartItem) => {
   cartSummaryHtml += `
           <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
             <div class="delivery-date">
-             Delivery date: ${dateString}
+             Delivery date: ${matchingProduct}
             </div>
             <div class="cart-item-details-grid">
               <img class="product-image"
@@ -142,7 +144,7 @@ document.querySelectorAll('.js-delete-link')
   });
   
 
-  /*document.querySelectorAll('.js-delivery-option')
+  document.querySelectorAll('.js-delivery-option')
     .forEach((element) => {
       element.addEventListener('click', () => {
         
@@ -150,14 +152,16 @@ document.querySelectorAll('.js-delete-link')
     deliveryOptionId } = element.dataset
      updateDeliveryOption(productId, deliveryOptionId);
      
-     
+     renderOrderSummary();
      
       })
     })
-  
-*/
+}
 
-document.querySelectorAll('.js-delivery-option')
+renderOrderSummary();
+
+
+/*document.querySelectorAll('.js-delivery-option')
   .forEach((element) => {
     element.addEventListener('click', () => {
       const { productId, deliveryOptionId } = element.dataset;
@@ -182,6 +186,6 @@ document.querySelectorAll('.js-delivery-option')
       container.textContent = dateString;
     });
   });
-  
+  **/
   
    
