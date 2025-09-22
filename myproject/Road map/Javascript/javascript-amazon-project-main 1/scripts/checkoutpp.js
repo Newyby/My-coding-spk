@@ -45,7 +45,7 @@ cart.forEach((cartItem) => {
   cartSummaryHtml += `
           <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
             <div class="delivery-date">
-             Delivery date ${dateString}
+             Delivery date: ${dateString}
             </div>
             <div class="cart-item-details-grid">
               <img class="product-image"
