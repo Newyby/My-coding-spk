@@ -7,12 +7,12 @@ import { formerCurrency } from './utils/money.js';
 import { hello } from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
 
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
- 
- 
+
+
 
 
 /*import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
-*/
+ */
 
 
 
@@ -39,10 +39,10 @@ cart.forEach((cartItem) => {
   
   console.log(matchingProduct);
   
-cartSummaryHtml += `
+  cartSummaryHtml += `
           <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
             <div class="delivery-date">
-              ${matchingProduct}
+             Delivery date ${matchingProduct}
             </div>
             <div class="cart-item-details-grid">
               <img class="product-image"
@@ -97,7 +97,11 @@ function deliveryOptionHTML(matchingProduct) {
       `$${(formerCurrency(deliveryOption.priceCents))} -`;
     html +=
       `
-                 <div class="delivery-option">
+                 <div class="delivery-option
+                 js-delivery -option"
+                  data-product-id = "${matchingProduct.id}"
+                 data-delivery-
+                 option-id="${ deliveryOption.id }">
                   <input type="radio"
                     class="delivery-option-input"
                     name="delivery-option-${matchingProduct.id}">
@@ -132,3 +136,14 @@ document.querySelectorAll('.js-delete-link')
     });
     
   });
+  
+
+  document.querySelector('.js-delivery-option')
+    .forEach((element) => {
+      element.addEventListener('click', () => {
+        
+        const { productId, deliveryOption } = element.dataset
+        updateDeliveryOption(productId, deliveryOptionId);
+      })
+    })
+  
