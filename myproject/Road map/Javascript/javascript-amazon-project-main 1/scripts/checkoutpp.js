@@ -41,13 +41,30 @@ cart.forEach((cartItem) => {
   
   console.log(matchingProduct);
   
-  const dateString = deliveryDate.format('dddd, MMMM D');
 
+const deliveryOptionId = cartItem.deliveryOptionId;
+
+let deliveryOptions = deliveryOption;
+
+deliveryOptions.forEach((option) => {
+if (option.id === deliveryOptionId) {
+ deliveryOptions = option;
+}  
+  
+});
+
+    const today = dayjs();
+    const deliveryDate = today.add(
+      deliveryOptions.deliveryDays,
+      'days'
+    );
+    const dateString = deliveryDate.format('dddd, MMMM D');
+    
   
   cartSummaryHtml += `
           <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
             <div class="delivery-date">
-             Delivery date: ${matchingProduct}
+             Delivery date: ${dateString}
             </div>
             <div class="cart-item-details-grid">
               <img class="product-image"
@@ -78,7 +95,7 @@ cart.forEach((cartItem) => {
                 <div class="delivery-options-title">
                   Choose a delivery option:
                 </div>
-              ${deliveryOptionHTML(matchingProduct)}
+              ${deliveryOptionHTML(matchingProduct, cartItem)}
 
               </div>
             </div>
@@ -88,7 +105,7 @@ cart.forEach((cartItem) => {
  `
 });
 
-function deliveryOptionHTML(matchingProduct) {
+function deliveryOptionHTML(matchingProduct, cartItem) {
   let html = '';
   deliveryOption.forEach((deliveryOption) => {
     const today = dayjs();
@@ -97,15 +114,18 @@ function deliveryOptionHTML(matchingProduct) {
       'days'
     );
     const dateString = deliveryDate.format('dddd, MMMM D');
-    const priceString = deliveryOption.priceCents === 0 ?
-      'FREE' :
-      `$${(formerCurrency(deliveryOption.priceCents))} -`;
+    const priceString = deliveryOption.priceCents === 0 
+     ? 'FREE' 
+     : `$${(formerCurrency(deliveryOption.priceCents))}  -`;
+     
+ const isChecked = deliveryOption.id === cartItem.deliveryOptionId 
     html +=
       `
            <div class="delivery-option js-delivery-option"
                   data-product-id = "${matchingProduct.id}"
                  data-delivery-option-id="${ deliveryOption.id }">
                   <input type="radio"
+                  ${isChecked ? 'checked': ''}
                     class="delivery-option-input"
                     name="delivery-option-${matchingProduct.id}">
                   <div>
