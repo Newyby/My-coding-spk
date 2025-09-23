@@ -1,8 +1,8 @@
-import { cart, removeFromCart, updateDeliveryOption } from '../data/cart.js';
+import { cart, removeFromCart, updateDeliveryOption } from '../../data/cart.js';
 
-import { products } from '../data/products.js';
+import { products } from '../../data/products.js';
 
-import { formerCurrency } from './utils/money.js';
+import { formerCurrency } from '../utils/money.js';
 
 import { hello } from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
 
@@ -16,7 +16,7 @@ import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 
 
 
-import { deliveryOption } from '../data/deliveryOptions.js';
+import { deliveryOption } from '../../data/deliveryOptions.js';
 
 
 hello();
@@ -24,7 +24,7 @@ const today = dayjs();
 const deliveryDate = today.add(7, 'days');
 console.log(deliveryDate.format('dddd, MMMM, D'));
 
-function renderOrderSummary() {
+export function renderOrderSummary() {
   
   let cartSummaryHtml = '';
   
