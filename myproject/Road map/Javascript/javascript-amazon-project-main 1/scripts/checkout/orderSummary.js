@@ -9,10 +9,12 @@ import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import { deliveryOption, getDeliveryOption } from '../../data/deliveryOptions.js';
 
 import {renderPaymentSummary} from './paymentSummary.js';
-hello();
+/*hello();
 const today = dayjs();
 const deliveryDate = today.add(7, 'days');
 console.log(deliveryDate.format('dddd, MMMM, D'));
+
+**/
 
 export function renderOrderSummary() {
   let cartSummaryHtml = '';
