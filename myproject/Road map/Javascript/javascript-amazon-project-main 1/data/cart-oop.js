@@ -94,45 +94,10 @@ bussinessCart.loadFromStorage();
 
 
 console.log(cart);
-console.log( bussinessCart)
+console.log( bussinessCart);
 
 
 
 
 
 
-export function calculateCartQuantity() {
-   let cartQuantity = 0;
-   cart.forEach((cartItem) => {
-     cartQuantity += cartItem.quantity;
-   });
-return cartQuantity;
-
-  
-}
-
-
-
-export function updateCartQuantity() {
-  let cartQuantity = 0;
-  cart.forEach((cartItem) => {
-    cartQuantity += cartItem.quantity;
-  });
-  
-  return cartQuantity;
-  
-}
- 
-export function updateDeliveryOption(productId, deliveryOptionId) {
-     let matchingItem;
-  cart.forEach((cartItem) => {
-        if (productId === cartItem.productId) {
-          matchingItem = cartItem;
-        }
-        });
-        matchingItem.deliveryOptionId = deliveryOptionId;
-        saveToStorage();
- }
- 
- 
- //console.log(cart);
