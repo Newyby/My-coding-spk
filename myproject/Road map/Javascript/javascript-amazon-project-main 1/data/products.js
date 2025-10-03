@@ -80,10 +80,14 @@ products = /**JSON.parse(xhr.response)**/productsData.map(
 console.log('load Products');
 
     
-  })
+  }).catch((error) => {
+    
+  console.log('unexpected error. Please try again later')  
+  
+  }) 
   return promise;
 }
-
+loadProductsFetch();
 /**
 loadProductsFetch().then(() => {
   
@@ -109,11 +113,17 @@ console.log('load Products');
 
 fun();
 });
-xhr.open('GET', 'http://supersimplebackend.dev/products')
+
+xhr.addEventListener('error', (error) => {
+console.log('unexpected error. Please try again later')  
+  
+})
+
+xhr.open('GET', 'http://wee.supersimplebackend.dev/products')
 xhr.send();
 }
 
-loadProducts()
+//loadProducts();
 
 
 
