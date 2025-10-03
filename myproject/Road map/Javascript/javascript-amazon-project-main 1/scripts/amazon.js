@@ -1,6 +1,6 @@
 import {cart, addToCart, calculateCartQuantity,updateCartQuantity} from '../data/cart.js';
 
-import {products} from '../data/products.js';
+import {products, loadProducts} from '../data/products.js';
 
 import {formerCurrency} from './utils/money.js';
 
@@ -8,9 +8,10 @@ import {formerCurrency} from './utils/money.js';
 
 //import {cart as myCart} from '//../data/cart.js';
 //module renaming above
+loadProducts(renderProductGrid);
 
-
-let productsHtml = '';
+function renderProductGrid() {
+  let productsHtml = '';
 
 products.forEach((product) => {
   productsHtml += `
@@ -76,6 +77,7 @@ products.forEach((product) => {
 
 
 
+
  
 
 
@@ -100,3 +102,5 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     updateCartQuantity(); // 👈 only updates count
   });
 });
+
+}
