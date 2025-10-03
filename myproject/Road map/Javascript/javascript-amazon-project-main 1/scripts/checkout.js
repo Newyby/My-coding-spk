@@ -12,9 +12,45 @@ import {loadCart} from '../data/cart.js';
 
 //import '../data/cart-class.js';
 
+async function loadPage() {
+//console.log('load page')
+await loadProductsFetch();
+const value = await new Promise((resolve) => {
+  loadCart(() => {
+    resolve();
+  });
+})
+
+renderOrderSummary();
+renderPaymentSummary();
+
+//await is the shortcut of .then
+//return 'value2' ;
+}
+
+
+loadPage();
+
+
+
+/*.then((value) => {
+  
+console.log('next step');  
+console.log(value);
+});
+
+
+
+
+
+
+
+/**1
+
 Promise.all([
   
   loadProductsFetch(),
+  **1/
 /** this code below uses callback new Promise((resolve) => {
   
   loadProducts(() => {
@@ -24,7 +60,7 @@ Promise.all([
 }),  
 
 **/
-
+/**1
  new Promise((resolve) => {
   loadCart(() => {
     resolve();
@@ -32,12 +68,11 @@ Promise.all([
 })
 ]).then((values) =>{
   console.log(values);
-renderOrderSummary();
-renderPaymentSummary();  
+
   
   
 });
-
+**1/
 
 /**
 new Promise((resolve) => {
