@@ -94,3 +94,31 @@ export function updateDeliveryOption(productId, deliveryOptionId) {
         matchingItem.deliveryOptionId = deliveryOptionId;
         saveToStorage();
  }
+ 
+ 
+ export let products = [];
+export function loadCart(fun){
+const xhr =  new XMLHttpRequest();
+xhr.addEventListener('load', () => {
+  
+  console.log(xhr.response)
+/**
+ we dont need the code below again since we are proceeding to backend 
+ products =JSON.parse(xhr.response).map(
+(productDetails)  => {
+  if(productDetails.type === 'clothing'){
+  return new Clothing (productDetails);
+  }
+  return new Product(productDetails)
+}
+);
+**/
+//console.log('load Products');
+
+fun();
+});
+xhr.open('GET', 'http://supersimplebackend.dev/cart')
+xhr.send();
+}
+
+
