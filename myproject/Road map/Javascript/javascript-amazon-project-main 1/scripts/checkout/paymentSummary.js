@@ -86,7 +86,7 @@ document.querySelector('.js-place-order')
   const response = await fetch('https://supersimplebackend.dev/orders', {
   method: 'POST',
   headers: {
-    'Content Type': 'application/json'
+    'Content-Type': 'application/json'
   },
   
   body: JSON.stringify({
@@ -102,10 +102,11 @@ document.querySelector('.js-place-order')
   
   } catch (error) {
    console.log('unexpected error: Try again later')
+   
   }
   
 
  window.location.href = 'orders.html'
- //console.log(order)
+ console.log(order)
 });
 }
