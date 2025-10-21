@@ -8,8 +8,43 @@
 </head>
 
 <body>
-  <script src="map.js">
+  <script src="map.js"></script>
+  <script>
+   let companies = `[{
+  "name": "Big corporation ",
+  "no of employee": 10,
+  "ceo": "Mary",
+  "rating": 3.6
   
+},
+{
+    "name": "small startup ",
+  "no of employee": 3,
+  "ceo": "Null",
+  "rating": 4.3
+}]`
+
+//console.log(JSON.parse(companies)[0].name);
+
+//console.log(companies)
+
+let jsonText = '{"name":"Amina","age":28,"skills":["JavaScript","HTML","CSS"]}';
+
+let obj = JSON.parse(jsonText);
+console.log(obj.skills[0]); // "JavaScript"
+
+obj.age = 29;
+let newText = JSON.stringify(obj);
+console.log(newText);
+
+
+localStorage.setItem('userInfo', newText);
+let stored = JSON.parse(localStorage.getItem('userInfo'));
+console.log(stored.age); // should be 29
+
+
+
+    
   </script>
 </body>
 

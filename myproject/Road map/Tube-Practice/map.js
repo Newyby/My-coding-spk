@@ -219,7 +219,7 @@ let calculator = new Calculator()
 calculator.read();
 console.log(typeof calculator.a)
 
-**/
+
 
 function Ladder() {
 this.step = 0,
@@ -243,6 +243,28 @@ ladder.up()
 ladder.up()
 ladder.showStep()
 
+let clone = Object.assign({}, ladder)
 
+console.log(clone)
 
 console.log( ladder)
+
+
+
+let users = {
+name: 'kayode',
+value: 2000,
+
+toString(){
+  return this.name;
+},
+
+valueOf(){
+  return this.value;
+}
+}
+
+console.log( users.name)
+console.log( `olaide: ${+users}`)
+
+**/
