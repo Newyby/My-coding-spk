@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dom Api practice</title>
+</head>
+
+<body>
+  
+  <form>
+  <label>Message:</label><br>
+  <textarea rows="4" cols="30"></textarea>
+</form>
+
+<textarea placeholder="Enter your message..."></textarea>
+
+
+<div class="container">
+  <textarea class="story"></textarea>
+  <button id="set-text" type="button">Set text content</button>
+<button id="clear-text" type="button">Clear text content</button>
+</div>
+  <script>
+      // create a couple of elements in an otherwise empty HTML page
+      const heading = document.createElement("h1");
+      const headingText = document.createTextNode("Big Head!");
+      heading.appendChild(headingText);
+      document.body.appendChild(heading);
+    </script>
+</body>
+
+</html>

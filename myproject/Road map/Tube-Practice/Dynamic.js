@@ -183,7 +183,7 @@ console.log(allConstruct('purple', ['p', 'ur', 'le', 'purpl']))
 
 **/
 
-const fib = (n) => {
+/**const fib = (n) => {
   const table = Array(n+1).fill(0)
   console.log(table)
   table[1] = 1
@@ -198,3 +198,11 @@ const fib = (n) => {
 console.log(fib(6))
 console.log(fib(7))
 console.log(fib(8))
+
+**/
+
+
+for (let step = 0; step < 5; step++) {
+  // Runs 5 times, with values of step 0 through 4.
+  console.log("Walking east one step");
+}

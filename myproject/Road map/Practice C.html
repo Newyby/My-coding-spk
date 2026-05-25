@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+<script>
+
+
+  const user = {
+    name: 'kola'
+  }
+   function funj(){
+   return  this.name
+   }
+    
+    
+    /**const fine = funj.bind(user)
+    fine()
+    console.log(fine())
+    **/
+    console.log(funj.apply(user))
+  
+  
+
+
+
+</script>
+
+</html>
