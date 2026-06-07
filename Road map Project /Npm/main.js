@@ -1,1 +1,3 @@
-console.log('yes')
+console.log('')
+let myDate = new Date();
+console.log(myDate.toString());
