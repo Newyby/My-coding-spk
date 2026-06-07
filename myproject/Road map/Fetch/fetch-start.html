@@ -96,7 +96,27 @@ function updateDisplay(value) {
 }
 
 // Load Verse 1 automatically when page opens
-updateDisplay("Verse 3");
+updateDisplay("Verse 3const search = document.querySelector('.username-input');
+const button = document.querySelector('.search-btn');
+const errorMessage = document.querySelector('.error-message');
+
+button.addEventListener('click', () => {
+  checkUsername();
+});
+
+function checkUsername() {
+  
+  const username = search.value;
+  
+  if (!username.trim()) {
+    errorMessage.textContent = "Please enter username";
+    return;
+  }
+  
+  errorMessage.textContent = '';
+  
+  console.log(username);
+}""");
 verseChoose.value = "Verse 1";
 
 

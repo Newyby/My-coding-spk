@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <h1>Calculator</h1>
+
+<!-- Display Screen -->
+<input
+  type="text"
+  class="display"
+  readonly
+>
+
+<!-- Calculator Buttons -->
+<div class="calculator-buttons">
+
+  <button onclick="" class="btn-number">7</button>
+  <button onclick="" class="btn-number">8</button>
+  <button onclick="" class="btn-number">9</button>
+  <button onclick="" class="btn-operator">/</button>
+
+  <button onclick="" class="btn-number">4</button>
+  <button onclick="" class="btn-number">5</button>
+  <button onclick="" class="btn-number">6</button>
+  <button onclick="" class="btn-operator">*</button>
+
+  <button onclick="" class="btn-number">1</button>
+  <button onclick="" class="btn-number">2</button>
+  <button onclick="" class="btn-number">3</button>
+  <button onclick="" class="btn-operator">-</button>
+
+  <button onclick="" class="btn-number">0</button>
+  <button onclick="" class="btn-decimal">.</button>
+  <button onclick="" class="btn-equals">=</button>
+  <button onclick="" class="btn-operator">+</button>
+
+  <button onclick="" class="btn-clear">C</button>
+  <button onclick="" class="btn-clear">Del</button>
+
+
+</div>
+
+<script>
+let calculation = "";
+const display = document.querySelector('.display')
+const buttons =
+  document.querySelectorAll('button');
+//console.log(buttons)
+
+/**
+buttons.forEach(button => {
+
+  button.addEventListener('click', () => {
+
+    console.log(button.textContent);
+
+  });
+})
+  
+  **/
+  
+  buttons.forEach((button) =>  {
+    const value = button.textContent;
+
+    button.addEventListener('click', () => {
+if (value === 'C') {
+  
+  clearCalculator()
+  
+} else if (value === '=') {
+  
+calculateResult()
+  
+} else if (value === 'Del') {
+  calculation = String(calculation);
+  calculation = calculation.slice(0, -1);
+  display.value = calculation;
+}else {
+    //calculation += value;
+  //display.value = calculation;
+addToCalculation(value)
+
+}
+
+    })
+  })
+
+
+
+function clearCalculator() {
+  calculation = '';
+  display.value = '';
+}
+
+function calculateResult() {
+  try {
+    calculation = eval(calculation);
+    display.value = calculation;
+  }
+  catch (error) {
+    display.value = 'Error';
+  }
+}
+
+
+
+
+function addToCalculation(value) {
+  calculation += value;
+  display.value = calculation;
+}
+
+  /**div.addEventListener('click', (e) => {
+    const index = e.target.dataset.index;
+    
+    if (e.target.classList.contains('js-delete')) {
+      deletebutton(index);
+    }
+    
+    if (e.target.classList.contains('js-edit')) {
+      editTask(index);
+    }
+  });
+  **/
+</script>
+</body>
+
+
+</html>
