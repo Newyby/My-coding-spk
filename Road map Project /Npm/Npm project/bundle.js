@@ -3,6 +3,11 @@
 },{}],2:[function(require,module,exports){
 const dayjs = require('dayjs');
 
+const timeElement =
+  document.querySelector('.current-time');
+
+timeElement.textContent =
+  dayjs().format('HH:mm:ss');
 console.log(dayjs().format());
 
 },{"dayjs":1}]},{},[2]);
